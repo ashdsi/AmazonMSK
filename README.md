@@ -1,7 +1,7 @@
 # Amazon MSK
 
-This project has .NET Core producer and consumer clients for Amazon MSK
-It also has integration with Amazon SNS 
+* This project has .NET Core producer and consumer clients for Amazon MSK.
+* It also has integration with Amazon SNS 
 
 ## Prerequisites
 
@@ -15,28 +15,40 @@ https://docs.aws.amazon.com/msk/latest/developerguide/create-topic.html
 
 For Producer:
 =========
+```
 /amazonmsk/kafkaconfig/producer/bootstrapservers       #make sure to add value as brokername:port
+```
+```
 /amazonmsk/kafkaconfig/producer/topicname
+```
 
 For ConsumerWorker:
 ===============
+```
 /amazonmsk/kafkaconfig/consumer/groupid
+```
+```
 /amazonmsk/kafkaconfig/consumer/bootstrapservers
+```
+```
 /amazonmsk/kafkaconfig/consumer/topicname
+```
+```
 /amazonmsk/kafkaconfig/consumer/snstopicarn
+```
 
 4. Run the Producer app in private subnet
 5. Run the ConsumerWorker app in private subnet
 
-6. API request path: http://<hostname>:<port>/api/order
-
+* API request path: http://<hostname>:<port>/api/order
+```
 HTTP POST with request body
 {
     "id": 1,
     "productname": "Chips",
     "quantity": 10
 }
-
+```
 
 
 
